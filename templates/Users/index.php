@@ -7,85 +7,82 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="/img/pintura.jpg" class="d-block w-100 img-fluid" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>SERVICIOS CONFIABLES Y PROFESIONALES</h1>
-                <p>Nuestros servicios están diseñados para brindarte soluciones confiables y profesionales
-                    que se adapten a tus necesidades específicas.</p>
+            <div class="carousel-caption d-md-block">
+                <h1 style="">SERVICIOS CONFIABLES</h1>
+                <p>Los servicios ofrecidos por los profesionales en HelpHome son variados yespecializados,
+                    asegurando que puedas encontrar el experto adecuado para cada necesidad.
+                    Aquí tienes una descripción de los principales servicios:</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="/img/carousel2.jpeg" class="d-block w-100 img-fluid" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>AUMENTA TUS POSIBILIDADES</h1>
-                <p>AL registrarte como un trabajador dentro de HelpHome tendas la oprtunidad de se visto desde nuestra plataforma
-                    aumentado tus posibilidades de ser solicitado.</p>
+            <div class="carousel-caption d-md-block">
+                <h1>AUMENTA TUS GANANCIAS</h1>
+                <p>Al registrarte como trabajador en HelpHome, tendrás la oportunidad de aumentar tu visibilidad
+                    y ser solicitado por más clientes. Nuestra plataforma te permite mostrar tus habilidades y experiencia,
+                    facilitando que los usuarios encuentren y contraten tus servicios.
+                </p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="/img/carousel3.jpeg" class="d-block w-100 img-fluid" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>Third slide label</h1>
-                <p>Some representative placeholder content for the third slide.</p>
+            <div class="carousel-caption d-md-block">
+                <h1>FÁCIL REGISTRO</h1>
+                <p>Completa nuestro formulario para acceder a los profesionales de HelpHome cerca de tu ciudad.
+                </p>
             </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </button>
 </div>
 <div style="text-align:center; margin-top:30px;" class="services">
-    <h1>Nuestros Sevicios</h1>
-    <p>Contamos con tres diferentes servicios para ti, en los cuales tenemos a los profesionales mas calificados
-        para cada uno de ellos
-    </p>
+    <h2>PROFESIONALES</h2>
+    <p style="margin-left: 40px; margin-right: 40px;">En HelpHome, nos aseguramos de que nuestros profesionales estén altamente capacitados y certificados
+        en sus respectivas áreas, garantizando un servicio de calidad y confiable. No importa cuál sea tu necesidad,
+        en HelpHome encontrarás el profesional adecuado para solucionarla de manera eficiente y segura.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 22rem;">
+                <img src="img/electricista.jpeg" class="card-img-top" alt="...">
+                <div style="text-align:center; " class=" card-body">
+                    <br>
+                    <h3>ELECTRICISTAS</h3>
+                    <p class="card-text">electricistas altamente capacitados ofrecen una amplia gama de servicios,
+                        desde la instalación y mantenimiento de sistemas eléctricos hastareparaciones. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 22rem;">
+                <img src="img/cerrajero.jpeg" class="card-img-top" alt="...">
+                <div style="text-align:center; " class="card-body">
+                    <br>
+                    <h3>CERRAJEROS</h3>
+                    <p class="card-text"> cerrajeros está capacitados para manejar una variedad de servicios,
+                        desde la instalación de cerraduras o la apertura de puertas bloqueadas. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 22rem;">
+                <img src="img/gasfiter.jpeg" class="card-img-top" alt="...">
+                <div style="text-align:center; " class=" card-body">
+                    <br>
+                    <h3>GASFITEROS</h3>
+                    <p class="card-text">
+                        En nuestra empresa, nos enorgullecemos de ofrecer a nuestros
+                        clientes acceso a trabajadores profesionales en gasfitería altamente capacitados y experimentados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="row">
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <img src="img/electricista.jpeg" style=" height:50px;" class="card-img-top" alt="...">
-            <div style="text-align:center; class=" card-body">
-                <br>
-                <h2>Electricistas</h2>
-                <p class="card-text">electricistas altamente capacitados ofrecen una amplia gama de servicios,
-                    desde la instalación y mantenimiento de sistemas eléctricos hastareparaciones. </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <img src="img/cerrajero.jpeg" style=" height:50px;" class="card-img-top" alt="...">
-            <div style="text-align:center; class=" card-body">
-                <br>
-                <h2>Cerrajero</h2>
-                <p class="card-text"> cerrajeros está capacitados para manejar una variedad de servicios,
-                    desde la instalación de cerraduras o la apertura de puertas bloqueadas. </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-            <img src="img/gasfiter.jpeg" style=" height:50px;" class="card-img-top" alt="...">
-            <div style="text-align:center; class=" card-body">
-                <br>
-                <h2>Gasfiter</h2>
-                <h6 class="card-text">
-                    En nuestra empresa, nos enorgullecemos de ofrecer a nuestros
-                    clientes acceso a trabajadores profesionales en gasfitería altamente capacitados y experimentados.</h6>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="color">
     <div class="container">
 
         <div style="text-align:center; margin-top:30px;" class="services">
             <br><br>
-            <h1 class="quien">¿Quienes Somos?</h1>
+            <h2 class="quien">¿Quienes Somos?</h2>
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -108,6 +105,18 @@
 </div>
 
 <style>
+    h2 {
+        font-size: 50px;
+
+    }
+
+    h1 {
+        margin-bottom: 200px;
+        margin-top: auto;
+        font-size: 50px;
+
+    }
+
     img {
         height: 450px;
         width: 100px;
@@ -115,19 +124,21 @@
     }
 
     img.img-fluid {
-        height: 600px;
+        height: 800px;
         /* Anula la altura fija y hace que la imagen sea responsiva */
         max-width: 100%;
         /* Se ajustará al ancho del contenedor padre */
     }
 
     .carousel-inner {
-        background-color: black !important;
+        background-color: #000 !important;
+        height: 800px;
+
     }
 
     .card-img-top {
-        height: 100px !important;
-        width: 100px;
+        height: 230px !important;
+        width: 290px !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
@@ -135,7 +146,7 @@
     .card {
 
         border-radius: 10% !important;
-        height: auto;
+        height: 500px;
 
     }
 
@@ -145,25 +156,12 @@
     }
 
     .who {
-        height: 490px;
-        width: auto;
+        height: 480px;
+        width: 393px;
         opacity: 1;
         float: right !important;
-
     }
 
-    @media (min-width: 768px) {
-        .col-md-6 {
-            -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-            flex-grow: 0;
-            flex-shrink: 0;
-            flex-basis: 50%;
-            max-width: 50%;
-            text-align: center;
-        }
-
-    }
 
     .parrafo {
         margin-top: 56px;
@@ -181,25 +179,33 @@
     }
 
     .carousel-item p {
-        /* Estilos para el párrafo dentro de carousel-item */
+
         color: white;
-        /* Cambia el color del texto */
-        font-size: 12px;
-        /* Cambia el tamaño de la fuente */
+
+        font-size: 20px;
+
         line-height: 1.5;
-        /* Ajusta el espacio entre líneas */
-        /* Otros estilos que desees aplicar */
+
     }
 
     .carousel-caption {
-        position: absolute;
         right: 15%;
-        bottom: 111px !important;
+        bottom: 140px !important;
         left: 15%;
         z-index: 10;
         padding-top: 20px;
         padding-bottom: 20px;
         color: #fff;
-        text-align: center;
+        text-align: left;
+        text-shadow: 1px 5px 8px #918c8c !important;
+    }
+
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: 0px !important;
+        margin-left: 0px !important;
     }
 </style>

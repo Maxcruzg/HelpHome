@@ -37,13 +37,14 @@
                 <div class="col-md-3">
                     <div class="card profesional" style="width: 18rem;">
                         <?php echo $this->Html->image('/img/image/' . $profesional->path, ['class' => 'card-img-top']); ?> <div class="card-body">
-                            <h5 class="card-title"><?= h($user->name . ' ' . $user->surname) ?></h5>
-                            <p class="card-text"><?= h($profesional->especialidad->name) ?></p>
-                            <p class="card-region"><?= h($user->region->regiones) . ' (' . h($user->comuna->comuna) . ')' ?></p>
-                            <p class="card-region"><?= h($profesional->experiencia) ?> </p>
-                            <p class="card-region"> <strong>Valor Promedio:</strong> <?= '$ ' . h($profesional->value) ?> </p>
+                        <h5 class="card-title"><?= h(ucwords(strtolower($user->name)) . ' ' . ucwords(strtolower($user->surname))) ?></h5>
+                        <p class="card-text"><?= h(ucwords(strtolower($profesional->especialidad->name))) ?></p>
+                        <p class="card-region"><?= h($user->region->regiones) . ' (' . h($user->comuna->comuna) . ')' ?></p>
+                        <p class="card-region"><?= h(ucwords(strtolower($profesional->experiencia))) ?></p>
+                        <p class="card-region"><strong>Valor Consulta:</strong> <?= '$ ' . number_format($profesional->value, 0, ',', '.') ?></p>
                             <div class="ver">
-                                <?= $this->Html->link(__('Ver Perfil'), ['controller' => 'Profesional', 'action' => 'view', $profesional->id], ['class' => 'side-nav-item']) ?>
+                            <?= $this->Html->link(__('Ver Perfil'), ['controller' => 'Profesional', 'action' => 'view', $profesional->id], ['class' => 'side-nav-item', 'style' => 'text-transform: lowercase !important;']) ?>
+                           
                             </div>
                         </div>
                     </div>
@@ -167,6 +168,8 @@
         background-color: #647D87;
         margin-left: auto;
         margin-right: auto;
+        text-transform: lowercase !important;
+
 
     }
 
@@ -182,5 +185,10 @@
 
     label[for="especialidad-id"] {
         display: none;
+    }
+
+    .ver a:hover {
+        background-color: transparent !important;
+        /* Hace que el fondo sea transparente al hacer clic */
     }
 </style>

@@ -27,7 +27,12 @@
                     <tr>
                         <td><strong>Region: </strong> <?= h($profesional->user->region->regiones) . ' (' . h($profesional->user->comuna->comuna) . ')' ?></td>
                     </tr>
+                    <div class="row">
+                        <td><strong>Informacion adicional:</td>
+                    </div>
                 </table>
+                <th></strong> <?= $profesional->experiencia ?></th>
+                <br>
                 <br>
                 <div class="row">
                     <div class="stars">
@@ -41,13 +46,13 @@
                                 <?php endif; ?>
                             <?php endfor; ?>
                         <?php else : ?>
-                            Sin Valoraciones
+
+                           Sin Valoraciones
+                        
                         <?php endif; ?>
                     </div>
-                    <div class="comentarios">
-                        <i class="fa-regular fa-message"> Comentarios</i>
-                    </div>
-                    <div class="tratos">
+
+                    <div style="color:white;" class="tratos">
                         <?= 'Citas Completadas : ' . $getCountCitas ?>
                     </div>
                 </div>
@@ -55,7 +60,9 @@
                 <div class="container">
                     <div class="row">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hireModal" style="background-color: gray; color: white; font-size: 20px; height: 65px; margin-top: -17px; border-radius: 20px; width: 260px;">
-                            AGENDAR
+                             <strong>
+                             AGENDAR
+                             </strong>
                         </button>
                     </div>
                 </div>
@@ -64,7 +71,7 @@
     </div>
     <div class="historial">
         <div class="col-md-12">
-            <h2>Trabajos Realizados</h2>
+            <h2>Comentarios</h2>
         </div>
     </div>
 </div>
@@ -94,7 +101,7 @@
                             <div class="form-group">
                                 <?= $this->Form->control('client_direction', [
                                     'label' => 'Ingrese la dirección',
-                                    'placeholder' => 'brisas del rio ·2762',
+                                    'placeholder' => 'calle ejemplo 0102',
                                     'class' => 'form-control',
                                     'style' => 'font-size: 11px;',
                                     'required',
@@ -138,7 +145,7 @@
                             <div class="form-group">
                                 <?= $this->Form->control('description', [
                                     'label' => 'Indique la descripción de su problema',
-                                    'placeholder' => 'brisas del rio ·2762',
+                                    'placeholder' => '',
                                     'class' => 'form-control',
                                     'style' => 'font-size: 11px;',
                                     'required',
@@ -148,19 +155,19 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <?= $this->Form->control('comentarios', [
-                                    'label' => 'Comentarios para saber más del problema',
-                                    'type' => 'textarea',
-                                    'class' => 'form-control',
-                                    'style' => 'font-size: 11px;',
-                                    'required',
-                                    'id' => 'inputComentario'
-                                ]); ?>
+                                    <?= $this->Form->control('comentarios', [
+                                        'label' => 'Explique brevemente lo que sucedio',
+                                        'type' => 'textarea',
+                                        'class' => 'form-control',
+                                        'style' => 'font-size: 11px;',
+                                        'required',
+                                        'id' => 'inputComentario'
+                                    ]); ?>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary submitBtn" onclick="submitContactForm">Agendar</button>
+                        <button type="submit" style="background-color:orange; color: white;" class="btn  submitBtn" onclick="submitContactForm">Agendar</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                     </div>
                     <?= $this->Form->hidden('user_id', ['value' => $user->id]); ?>

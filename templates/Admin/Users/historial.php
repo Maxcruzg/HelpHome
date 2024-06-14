@@ -1,7 +1,5 @@
-<script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js"></script>
-
 <div class="row">
-    <h3>Historial de Citas Finalizadas</h3>
+    <h3>Historial de Citas</h3>
     <table class="table citas">
         <thead>
             <tr>
@@ -15,7 +13,7 @@
         </thead>
         <tbody>
             <?php foreach ($citas as $cita) : ?>
-                <?php if ($cita->estado == 4) :  ?>
+                <?php if ($cita->estado == 4 || $cita->estado == 2) :  ?>
                     <tr>
                         <td><?= $cita->id ?></td>
                         <td><?= $cita->user->name . ' ' . $cita->user->name  ?></td>
@@ -37,11 +35,10 @@
                             ?>
                         </td>
                         <td class="actions">
-                            <?= $this->Form->postLink(
-                                '<i class="fa-solid icon fa-eye"></i>',
-                                ['controller' => 'Citas', 'action' => 'view', $cita->id],
-                                ['escapeTitle' => false, 'title' => 'Ver Cita']
-                            ) ?>
+                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal<?= $cita->id ?>" title="Ver Cita">
+                                <i class="fa-solid icon fa-eye"></i>
+                            </button>
+
                         </td>
                     </tr>
                 <?php endif; ?>
@@ -49,6 +46,60 @@
         </tbody>
     </table>
 </div>
+
+<?php foreach ($citas as $cita) : ?>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal<?= $cita->id ?>" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Datos de la Cita</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Monto</th>
+                                <td><?= '$ ' . number_format($cita->value, 0, ',', '.') ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Fecha Cita</th>
+                                <td><?= $cita->fecha_cita ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Correo Cliente</th>
+                                <td><?= $cita->client_email ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Teléfono Cliente</th>
+                                <td><?= $cita->client_phone ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dirección</th>
+                                <td><?= $cita->client_direction ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Problema</th>
+                                <td><?= $cita->description ?></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Comentarios</th>
+                                <td><?= $cita->comentarios ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
 <style>
     .citas {
         margin-left: 50px;

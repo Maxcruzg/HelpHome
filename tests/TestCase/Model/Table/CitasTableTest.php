@@ -26,7 +26,7 @@ class CitasTableTest extends TestCase
     protected $fixtures = [
         'app.Citas',
         'app.Users',
-        'app.Profesionals',
+        'app.HistorialCitas',
     ];
 
     /**

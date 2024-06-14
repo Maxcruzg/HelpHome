@@ -98,6 +98,7 @@ class UsersController extends AppController
 
     public function lookinProfesional()
     {
+
         $especialidades = $this->Users->Profesional->Especialidad->find('list', ['limit' => 3]);
         $regions = $this->Users->Regions->find('list');
 
@@ -222,6 +223,7 @@ class UsersController extends AppController
 
     public function resetPassword($token = null)
     {
+        $this->viewBuilder()->setLayout('login');
 
         $tokenTable = FactoryLocator::get('Table')->get('Token');
         $tokenData = $tokenTable->find()

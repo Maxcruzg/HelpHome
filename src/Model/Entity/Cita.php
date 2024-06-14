@@ -9,7 +9,7 @@ use Cake\ORM\Entity;
  * Cita Entity
  *
  * @property int $id
- * @property string $client_phone
+ * @property int $client_phone
  * @property string $client_email
  * @property string $client_direction
  * @property string $description
@@ -18,9 +18,10 @@ use Cake\ORM\Entity;
  * @property int $user_id
  * @property int $estado
  * @property string $comentarios
+ * @property int|null $value
  *
  * @property \App\Model\Entity\User $user
- * @property \App\Model\Entity\Profesional $profesional
+ * @property \App\Model\Entity\HistorialCita[] $historial_citas
  */
 class Cita extends Entity
 {
@@ -43,7 +44,8 @@ class Cita extends Entity
         'user_id' => true,
         'estado' => true,
         'comentarios' => true,
+        'value' => true,
         'user' => true,
-        'profesional' => true,
+        'historial_citas' => true,
     ];
 }

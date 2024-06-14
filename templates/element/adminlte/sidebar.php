@@ -16,7 +16,7 @@
                 <img src="/img/userlogo.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a class="d-block"><?= $user->name . ' ' . $user->surname ?></a>
+            <a class="d-block"><?= ucwords($user->name) ?> <?= ucwords($user->surname) ?></a>
             </div>
         </div>
         <nav class="mt-2">

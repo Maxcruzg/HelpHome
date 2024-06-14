@@ -49,6 +49,7 @@ class UsersController extends AppController
             ->where(['Citas.profesional_id' => $profesional->id])
             ->contain(['Users']) // Incluir los datos del usuario
             ->all();
+        
 
         $this->set(compact('citas'));
     }

@@ -16,6 +16,9 @@ $cakeDescription = 'HelpHome - Profesionales a tu alcance';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -27,12 +30,12 @@ $cakeDescription = 'HelpHome - Profesionales a tu alcance';
 <body>
     <?php if ($user) : ?>
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <img style="height: 70px;" src="/img/logo.png" alt="">
+            <img style="height: 90px;  width: 100px; opacity: 1;" src="/img/logo.png" alt="">
             </a>
             <?php $currentUrl = ""; ?>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto"> 
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                     </li>
                 </ul>
@@ -57,7 +60,7 @@ $cakeDescription = 'HelpHome - Profesionales a tu alcance';
                     <?php if ($user->is_profesional == 1) : ?>
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="far fa-circle nav-icon"></i> <?= $user->name . ' ' . $user->surname ?>
+                                <i class="far fa-circle nav-icon"></i> <?= ucwords($user->name) ?> <?= ucwords($user->surname) ?>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="userDropdown">
                                 <div class="dropdown-divider"></div>
@@ -100,7 +103,7 @@ $cakeDescription = 'HelpHome - Profesionales a tu alcance';
         </nav>
     <?php else : ?>
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <img style="height: 70px; width:100px;" src="/img/logo.png" alt="">
+            <img style="height: 90px; width:100px; opacity: 1;" src="/img/logo.png" alt="">
             </a> <?php $currentUrl = ""; ?>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <form class="form-inline my-2 my-lg-0">
@@ -229,8 +232,12 @@ $cakeDescription = 'HelpHome - Profesionales a tu alcance';
 
 
 <style>
+    body {
+        font-family: 'Montserrat', sans-serif !important;
+    }
+
     .navbar {
-        height: 80px;
+        height: 100px;
         background-color: #D9A70A !important;
 
     }
@@ -250,6 +257,13 @@ $cakeDescription = 'HelpHome - Profesionales a tu alcance';
 
     a {
         color: white !important;
+        font-weight: bolder;
+        text-transform: uppercase;
+
+    }
+
+    a:hover {
+        background-color: #d5c01d !important;
     }
 
     .contacto-footer {
@@ -269,24 +283,4 @@ $cakeDescription = 'HelpHome - Profesionales a tu alcance';
     .dropdown-menu.show {
         background-color: #D9A70A !important;
     }
-
-    /* .dropdown-menu.show:hover {
-        background-color: #DFAD0FCF !important;
-        color: black !important;
-    } */
 </style>
-
-<!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li> -->

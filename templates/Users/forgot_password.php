@@ -4,7 +4,7 @@
     <?= $this->Form->create() ?>
     <div class="form-group">
         <strong>
-            <p>Ingresa tu correo para recibir tu token</p>
+            <p style = "text-align:center">Ingresa tu correo para recibir tu token</p>
         </strong>
         <?= $this->Form->control('email', [
             'placeholder' => 'Ingrese su email',
@@ -16,26 +16,11 @@
     </div>
     <br>
     <div style="margin-top: 20px;" class="boton-principal">
-        <a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'resetPassword']) ?>">¿Aun no te registras? Pincha Aquí</a>
-        <?= $this->Form->button('Enviar Solicitud', [
+        <?= $this->Form->button('ENVIAR SOLICITUD', [
             'type' => 'submit',
-            'class' => 'btn btn-success',
+            'class' => 'btn btn-lg',
             'style' => 'margin-top: 5%; margin-bottom:5%;'
         ]) ?>
         <?= $this->Form->end() ?>
     </div>
 </div>
-<style>
-    .boton-principal {
-        text-align: center;
-    }
-
-    .boton-principal a {
-        color: blue !important;
-    }
-
-    body {
-        font-size: 14px !important;
-        background-color: transparent !important;
-    }
-</style>

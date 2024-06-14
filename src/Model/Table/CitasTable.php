@@ -12,6 +12,7 @@ use Cake\Validation\Validator;
  * Citas Model
  *
  * @property \App\Model\Table\UsersTable&\Cake\ORM\Association\BelongsTo $Users
+ * @property \App\Model\Table\HistorialCitasTable&\Cake\ORM\Association\HasMany $HistorialCitas
  *
  * @method \App\Model\Entity\Cita newEmptyEntity()
  * @method \App\Model\Entity\Cita newEntity(array $data, array $options = [])
@@ -47,6 +48,9 @@ class CitasTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER',
         ]);
+        $this->hasMany('HistorialCitas', [
+            'foreignKey' => 'cita_id',
+        ]);
     }
 
     /**
@@ -58,8 +62,7 @@ class CitasTable extends Table
     public function validationDefault(Validator $validator): Validator
     {
         $validator
-            ->scalar('client_phone')
-            ->maxLength('client_phone', 255)
+            ->integer('client_phone')
             ->requirePresence('client_phone', 'create')
             ->notEmptyString('client_phone');
 
@@ -98,9 +101,13 @@ class CitasTable extends Table
 
         $validator
             ->scalar('comentarios')
-            ->maxLength('comentarios', 255)
+            ->maxLength('comentarios', 500)
             ->requirePresence('comentarios', 'create')
             ->notEmptyString('comentarios');
+
+        $validator
+            ->integer('value')
+            ->allowEmptyString('value');
 
         return $validator;
     }
