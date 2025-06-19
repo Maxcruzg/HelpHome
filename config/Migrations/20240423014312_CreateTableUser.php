@@ -124,19 +124,6 @@ class CreateTableUser extends AbstractMigration
                 'update' => 'CASCADE',
             ]);
         $historial->save();
-
-        $citas = $this->table('citas')
-            ->addColumn('user_id', 'integer', ['limit' => 100])
-            ->addColumn('fecha_inicio', 'date', ['null' => true])
-            ->addColumn('fecha_termino', 'date', ['null' => true])
-            ->addColumn('estado', 'integer', ['limit' => 10])
-
-            ->addForeignKey('user_id', 'users', 'id', [
-                'delete' => 'CASCADE',
-                'update' => 'CASCADE',
-            ]);
-        $citas->save();
-
         $calificacion = $this->table('califications')
             ->addColumn('service_id', 'integer', ['limit' => 100])
             ->addColumn('user_id', 'integer', ['limit' => 100])

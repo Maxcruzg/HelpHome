@@ -34,14 +34,6 @@ class Userso extends AbstractMigration
                 'update' => 'CASCADE',
             ]);
         $profesional->save();
-        $citas = $this->table('citas')
-            ->addColumn('profesional_id', 'integer', ['limit' => 100])
-
-            ->addForeignKey('profesional_id', 'profesional', 'id', [
-                'delete' => 'CASCADE',
-                'update' => 'CASCADE',
-            ]);
-        $citas->update();
         $historial = $this->table('service_history')
             ->addColumn('profesional_id', 'integer', ['limit' => 100])
             ->addForeignKey('profesional_id', 'profesional', 'id', [

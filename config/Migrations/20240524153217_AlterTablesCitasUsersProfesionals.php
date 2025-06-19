@@ -62,11 +62,17 @@ class AlterTablesCitasUsersProfesionals extends AbstractMigration
             ->addColumn('client_direction', 'string', ['limit' => 255])
             ->addColumn('description', 'string', ['limit' => 255])
             ->addColumn('fecha_cita', 'date', ['null' => true])
-            ->addColumn('profesional_id', 'integer', ['limit' => 255])
-            ->addColumn('user_id', 'integer', ['limit' => 255])
-            ->addColumn('estado', 'integer', ['limit' => 255])
-            ->addColumn('comentarios', 'text', ['limit' => 255]);
+            ->addColumn('profesional_id', 'integer')
+            ->addColumn('user_id', 'integer')
+            ->addColumn('estado', 'integer')
+            ->addColumn('comentarios', 'text', ['limit' => 500])
+
+            ->addForeignKey('profesional_id', 'profesional', 'id', [
+                'delete' => 'CASCADE',
+                'update' => 'CASCADE',
+            ]);
 
         $citas->save();
+
     }
 }
