@@ -16,12 +16,12 @@ class AlterTablesCitasUsersProfesionals extends AbstractMigration
     public function change(): void
     {
 
-        // $users = $this->table('users');
-        // // $users->addColumn('is_profesional', 'boolean', [
-        // //     'default' => false,
-        // //     'null' => false,
-        // // ]);
-        // $users->update();
+        $users = $this->table('users');
+        $users->addColumn('is_profesional', 'boolean', [
+            'default' => false,
+            'null' => false,
+        ]);
+        $users->update();
 
         // $profesional = $this->table('profesional')
 
@@ -73,6 +73,5 @@ class AlterTablesCitasUsersProfesionals extends AbstractMigration
             ]);
 
         $citas->save();
-
     }
 }
